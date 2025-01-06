@@ -7,12 +7,21 @@ Console.WriteLine("Bem vindos(as), a calculadora simple de Terminal (precione EN
 Console.ReadLine();
 
 Console.Clear();
-Console.WriteLine("Digite ==> Soma = (S), Subitrair = (Sb), Dividir = (D), Multiplicar = (M), \n  Potencia = (P), Seno = (Sen), Coseno = (Cos), Tangente = (Tan), Raiz quadrada = (Raiz): ");
+Console.WriteLine("Escolha a operação desejada: ");
+Console.WriteLine("1 - Soma");
+Console.WriteLine("2 - Subtração");
+Console.WriteLine("3 - Multiplicação");
+Console.WriteLine("4 - Potenciação");
+Console.WriteLine("5 - Seno");
+Console.WriteLine("6 - Coseno");
+Console.WriteLine("7 - Tangente");
+Console.WriteLine("8 - Raiz Quadrada");
+
 
 string opcao = Console.ReadLine().ToUpper();
 Console.Clear();
 
-if (opcao == "SEN" || opcao == "COS" || opcao == "TAN")
+if (opcao == "5" || opcao == "6" || opcao == "7")
 {
 
   Console.WriteLine("Digite o angulo: ");
@@ -20,19 +29,19 @@ if (opcao == "SEN" || opcao == "COS" || opcao == "TAN")
 
   switch (opcao)
   {
-    case "SEN":
+    case "5":
       calc.Seno(angulo);
       break;
-    case "COS":
+    case "6":
       calc.Coseno(angulo);
       break;
-    case "TAN":
+    case "7":
       calc.Tangente(angulo);
       break;
   }
 
 }
-else if (opcao == "RAIZ")
+else if (opcao == "8")
 {
 
   Console.WriteLine("Digite o valor para saber a Raiz: ");
@@ -53,19 +62,19 @@ else
 
   switch (opcao)
   {
-    case "S":
+    case "1":
       calc.Somar(a, b);
       break;
-    case "SB":
+    case "2":
       calc.Subtrair(a, b);
       break;
-    case "D":
+    case "3":
       calc.Dividir(a, b);
       break;
-    case "M":
+    case "4":
       calc.Multiplicar(a, b);
       break;
-    case "P":
+    case "5":
       calc.Potencia(a, b);
       break;
     default:
